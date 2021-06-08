@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* Effect zoom image */
+    -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+body {
+    min-height: 1000px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Utility */
+html{
+    scroll-behavior: smooth;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+i {
+    margin: 0 10px;
+}
+
+/* btn */
+.btn {
+    margin: 20px 0;
+    padding: 7px 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.btn-ins {
+    background-color: black;
+    color: white;
+}
+
+.btn-disc {
+    background-color: white;
+    color: black;
+}
+/* Section jumbo */
+.jumbo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fusione della sezione con il colore dello sfondo  */
+.jumbo:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+.jumbo:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+.jumbo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* No puntatore */
+    pointer-events: none;
+}
+
+#brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    height: 220px;
+    z-index: 1;
+    color: white;
+}
+#brand img {
+    height: 225px;
+    width: 210px;
+}
+#brand h2 {
+    font-size: 110px;
+    margin-left: 220px;
+}
+
+/* per nascondere il titolo quando scende con js */
+#road {
+    z-index: 2;
+}
+/* /Section jumbo */
+
+/* Section type */
+.type {
+    margin: 20px 0;
+}
+
+.title {
+    margin: 10px 0;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.box {
+    height: calc(100vh / 3 + 40px);
+    width: calc(100vh / 3) ;
+    margin: 5px;
+    border-radius: 5px;
+}
+.box .img {
+    width: 100%;
+    height: calc(100vh / 3);
+}
+.box .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.box .img img {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.box .img img:hover {
+    width: calc(100vh / 3);
+    height: calc(100vh / 3 + 40px);
+} 
+
+.box .ph {
+    height: 40px;
+    line-height: 40px;
+}
+
+/* inspiration */
+.post {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.text-post {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    padding: 10px;
+    transform: translateY(-50%);
+    max-width: 20%;
+}
+.text-post h1 {
+    font-size: 35px;
+    font-weight: 400;
+}
+.text-post p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.post-natura {
+    background-image: url('../img/post-1.webp');
+    background-size: cover;
+    background-position-y: bottom;
+}
+
+/* Experience */
+
+.title {
+    margin-bottom: 0px;
+}
+.box-experience {
+    height: calc(100vh / 2 + 80px);
+    width: calc(100vh / 2) ;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 0.5s;
+}
+.box-experience .img {
+    width: 100%;
+    height: calc(100vh / 2);
+}
+.box-experience .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Host */
+.post-host {
+    background-image: url('../img/post-2.webp');
+    background-size: cover;
+    background-position-y: bottom;
+}
+
+.text-host {
+    border-radius: 5px;
+    background-color: #201C19;
+}
+.post-host .text-post {
+    color: white;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    background-color: #F7F7F7;
+    color: black;
+}
+
+.cl {
+    margin: 10px 0;
+    width: calc(100vh / 4);
+}
+.cl h1 {
+    font-size: 14px;
+}
+.cl li {
+    font-size: 12px;
+}
+
+.fine li:before {
+    content: '·';
+    margin: 3px;
+}
+
+.footer-down-row li {
+    display: inline-block;
+    font-size: 12px;
+}
+
+footer .fa-arrow-up {
+    position: absolute;
+    bottom: 13%;
+    right: 5%;
+    padding: 20px;
+    border-radius: 50%;
+    background-color:#EB5B62;
+}
+
+/* Hover */
+.box:hover {
+    cursor: pointer;
+    background: linear-gradient(to top, #153B55,rgba(255, 255, 255, 0.027));
+    color: white;
+    text-shadow: -1px 0 #153B55, 0 1px #153B55, 1px 0 #153B55, 0 -1px #153B55;
+}
+
+.post-natura:hover {
+    background-image: url('../img/post-1-hover.jpg');
+    background-size: cover;
+    background-position-y: bottom;
+}
+
+.box-experience:hover {
+    transform: translateY(-10px);
+}
+
+.post-host:hover {
+    background-image: url('../img/post-2-hover.jpg');
+    background-size: cover;
+    background-position-y: 40%;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #ecacb0; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #EB5B62;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c7474e; 
+  }
+
+/* Media */
+@media only screen and (max-width: 1200px) {
+
+    .title {
+        text-align: center;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .text-post {
+        max-width: 40%;
+    }
+
+    .post-natura {
+        background-position-x: center;
+    }
+
+    .post-host {
+        background-image: url('../img/post-2.webp');
+        background-size: cover;
+        background-position-y: bottom;
+        background-position-x: center;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    #brand {
+        height: 150px;
+    }
+    #brand img {
+        height: 110px;
+        width: 100px;
+    }
+    #brand h2 {
+        font-size: 70px;
+        height: 150px;
+        margin-left: 110px;
+    }
+
+    .box {
+        width: calc(100vh);
+    }
+    .box .img {
+        width: 100%;
+    }
+    .box .img img:hover {
+        width: 100%;
+    }
+
+    footer .cl {
+        margin: 10px 0;
+        width: 100%;
+    }
+  }
